@@ -61,3 +61,6 @@ unix:!macx: LIBS += -L$$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer/ -l
 
 INCLUDEPATH += $$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer
 DEPENDPATH += $$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer
+
+DISTFILES += \
+    eq.py

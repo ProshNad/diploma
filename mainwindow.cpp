@@ -4,6 +4,8 @@
 
 #include <QCoreApplication>
 #include <QApplication>
+#include <QProcess>
+#include <QStringList>
 
 
 #define CGAL_USE_BASIC_VIEWER
@@ -112,5 +114,50 @@ void MainWindow::on_pushButton_3_clicked()//нарисовать из точек
         CGAL::DefaultColorFunctorT3 fcolor;
         CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>* ma= new CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>(nullptr, dt3, "Фигура из точек", false, fcolor);
         ma->show();
+
+}
+
+void MainWindow::on_pushButton_5_clicked()//нарисовать уравнение
+{
+    QString eq = ui->lineEdit->text();
+
+    QStringList arguments {"/home/nadia/bezie_and_triangulation/eq.py", eq};
+    QProcess p;
+    p.start("python", arguments);
+    p.execute("sudo python", arguments);
+    p.waitForFinished();
+    qDebug()<<p.readAll()<<p.arguments();
+
+    QFile file("/home/nadia/bezie_and_triangulation/points"+eq+".txt");
+    qDebug()<<file.exists();
+
+    std::vector<K::Point_3> points;
+
+            if (file.open(QIODevice::ReadOnly))
+            {
+               QTextStream in(&file);
+               while (!in.atEnd())
+               {
+                  QString line = in.readLine();
+                  QStringList list = line.split(' ');
+                  qDebug()<<list.at(0)<<" "<<list.at(1)<<" "<<list.at(2);
+                  K::Point_3 a(QString(list.at(0)).toInt(),QString(list.at(1)).toInt(),QString(list.at(2)).toInt());
+                  points.push_back(a);
+
+               }
+               file.close();
+            }
+
+
+            DT3 dt3(points.begin(), points.end());
+
+
+               CGAL::DefaultColorFunctorT3 fcolor;
+               CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>* ma= new CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>(nullptr, dt3, "Фигура из точек", false, fcolor);
+               ma->show();
+
+
+
+
 
 }
