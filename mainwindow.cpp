@@ -6,6 +6,9 @@
 #include <QApplication>
 #include <QProcess>
 #include <QStringList>
+#include <QThread>
+#include <QtConcurrent/QtConcurrent>
+#include <QFutureWatcher>
 
 
 #define CGAL_USE_BASIC_VIEWER
@@ -41,6 +44,8 @@ typedef CGAL::Creator_uniform_3<double,K::Point_3>          Creator;
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef CGAL::Delaunay_triangulation_2<K> Triangulation;
 typedef Triangulation::Point Point2;
+
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -119,14 +124,35 @@ void MainWindow::on_pushButton_3_clicked()//нарисовать из точек
 
 void MainWindow::on_pushButton_5_clicked()//нарисовать уравнение
 {
-    QString eq = ui->lineEdit->text();
 
-    QStringList arguments {"/home/nadia/bezie_and_triangulation/eq.py", eq};
-    QProcess p;
-    p.start("python", arguments);
-    p.execute("sudo python", arguments);
-    p.waitForFinished();
-    qDebug()<<p.readAll()<<p.arguments();
+       QString eq = ui->lineEdit->text();
+
+        QFutureWatcher<void>* watcher = new QFutureWatcher<void>;;
+
+        connect (watcher,&QFutureWatcher<void>::finished,[=](){draw_eq(eq);});
+
+        watcher->setFuture(QtConcurrent::run([&]() {
+            QStringList arguments {"/home/nadia/bezie_and_triangulation/eq.py", eq};
+            QProcess p;
+        p.start("python", arguments);
+        p.execute("sudo python", arguments);
+        p.waitForFinished();
+       // qDebug()<<p.readAll()<<p.arguments();
+        qDebug()<<"end!";
+
+            }));
+
+          qDebug()<<"end2";
+
+
+
+
+
+}
+
+void MainWindow::draw_eq(QString eq)
+{
+
 
     QFile file("/home/nadia/bezie_and_triangulation/points"+eq+".txt");
     qDebug()<<file.exists();
@@ -140,8 +166,8 @@ void MainWindow::on_pushButton_5_clicked()//нарисовать уравнен�
                {
                   QString line = in.readLine();
                   QStringList list = line.split(' ');
-                  qDebug()<<list.at(0)<<" "<<list.at(1)<<" "<<list.at(2);
-                  K::Point_3 a(QString(list.at(0)).toInt(),QString(list.at(1)).toInt(),QString(list.at(2)).toInt());
+                  //qDebug()<<list.at(0)<<" "<<list.at(1)<<" "<<list.at(2);
+                  K::Point_3 a(QString(list.at(0)).toFloat(),QString(list.at(1)).toFloat(),QString(list.at(2)).toFloat());
                   points.push_back(a);
 
                }
@@ -153,11 +179,9 @@ void MainWindow::on_pushButton_5_clicked()//нарисовать уравнен�
 
 
                CGAL::DefaultColorFunctorT3 fcolor;
+
                CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>* ma= new CGAL::SimpleTriangulation3ViewerQt<DT3, CGAL::DefaultColorFunctorT3>(nullptr, dt3, "Фигура из точек", false, fcolor);
                ma->show();
-
-
-
 
 
 }

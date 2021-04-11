@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui xml opengl svg
-CONFIG += c++14
+CONFIG += c++14 c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -64,3 +64,6 @@ DEPENDPATH += $$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer
 
 DISTFILES += \
     eq.py
+
+RESOURCES += \
+    re.qrc

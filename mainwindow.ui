@@ -6,176 +6,350 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>690</width>
-    <height>467</height>
+    <width>969</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true">QFrame{
+ background-color: #f5e6df;
+  border-radius: 55px;        
+    border-width: 1px;
+    border-color: #54b2ff;
+    border-style: solid;
+}
+
+QTableWidget{
+
+background-color: white;
+border-radius: 0px; 
+background-image: url(:/imgbin-technology-network-lymsvi5q9GxJL.jpg);   
+border-color: #54b2ff;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #54b2ff;
+    border: 1px solid #54b2ff;
+}
+
+QHeaderView::section {
+    background-color: #dbeaff;
+    padding: 4px;
+    border: 0px;
+}
+
+
+QWidget {
+    background-color: white;
+
+} 
+
+QLabel {
+    font: medium Ubuntu;
+    font-size: 20px;
+    color: #4f4e4e;
+border-width: 0px;
+}        
+
+
+QLineEdit {
+padding: 1px;
+border-style: none none double none ;
+border-width: 2px ;
+border-radius: 0px;
+ border-color: #54b2ff;
+ background-color: white;
+}
+
+QLineEdit:hover {
+    border-width: 3px ;
+}
+
+
+
+
+
+
+
+QPushButton{
+
+border-radius: 35px;  
+    background-color: white;
+   font-size: 10pt;
+    font-weight: bold;
+   color: #4f4e4e;
+    width:  70px;  
+    height: 70px;
+    border-radius: 35px;        
+    border-width: 1px;
+    border-style: solid;  
+    border-color: #9ba0a8;
+}
+ 
+ QPushButton:hover  {
+    background-color: #dbeaff;;
+border-radius: 25px;    
+border-color: #54b2ff;
+}
+QPushButton:pressed {
+    background-color: #F9D8D4;
+border-radius: 35px;    
+} 
+    </string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="5" column="0" colspan="3">
-     <widget class="Line" name="line_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
       </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
       </property>
-      <row>
-       <property name="text">
-        <string>Точка №1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Точка №2</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>x</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>y</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>z</string>
-       </property>
-      </column>
-      <item row="0" column="0">
-       <property name="text">
-        <string>1</string>
-       </property>
-      </item>
-      <item row="0" column="1">
-       <property name="text">
-        <string>2</string>
-       </property>
-      </item>
-      <item row="0" column="2">
-       <property name="text">
-        <string>3</string>
-       </property>
-      </item>
-      <item row="1" column="0">
-       <property name="text">
-        <string>4</string>
-       </property>
-      </item>
-      <item row="1" column="1">
-       <property name="text">
-        <string>5</string>
-       </property>
-      </item>
-      <item row="1" column="2">
-       <property name="text">
-        <string>6</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
       </property>
-      <property name="text">
-       <string>Задать точки вручную</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="3">
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Количество случайных точек:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QSpinBox" name="spinBox">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="minimum">
-       <number>1</number>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QPushButton" name="pushButton">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Сгенерировать из случайных точек</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Счиать набор точек из файла</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="2">
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Добавить точку</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0" colspan="3">
-     <widget class="Line" name="line_3">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0">
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="text">
-       <string>Визуализироовать уравнение</string>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="2">
-     <widget class="QLineEdit" name="lineEdit"/>
-    </item>
-    <item row="9" column="1">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>z=</string>
-      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="3" column="0" colspan="8">
+        <widget class="Line" name="line_3">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1" colspan="4">
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Сгенерировать из случайных точек</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="8">
+        <widget class="Line" name="line_2">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Визуализироовать уравнение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="5">
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Количество точек:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0" colspan="6">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Счиать набор точек из файла</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="6">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="6">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">    font: 12pt &quot;Purisa&quot;;
+    font-size: 25px;
+    color: #54b2ff;
+border-width: 1px;
+border-radius: 10px;
+background-image: url(:/depositphotos_51907249-stock-illustration-abstract-isometric-computer-generated-3d.jpg);</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Draw3D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="7">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="10" column="0" colspan="8">
+        <widget class="Line" name="line">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="8">
+        <widget class="Line" name="line_4">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4" colspan="4">
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item row="5" column="4">
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="maximumSize">
+          <size>
+           <width>385</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <row>
+          <property name="text">
+           <string>Точка №1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Точка №2</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>x</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>y</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>z</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </item>
+         <item row="0" column="1">
+          <property name="text">
+           <string>2</string>
+          </property>
+         </item>
+         <item row="0" column="2">
+          <property name="text">
+           <string>3</string>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>4</string>
+          </property>
+         </item>
+         <item row="1" column="1">
+          <property name="text">
+           <string>5</string>
+          </property>
+         </item>
+         <item row="1" column="2">
+          <property name="text">
+           <string>6</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="4">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Визуализировать по  точкам</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="5">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
@@ -185,7 +359,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>690</width>
+     <width>969</width>
      <height>20</height>
     </rect>
    </property>
