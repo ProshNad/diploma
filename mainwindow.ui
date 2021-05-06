@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Draw3D</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame{
@@ -117,145 +117,7 @@ border-radius: 35px;
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="3" column="0" colspan="8">
-        <widget class="Line" name="line_3">
-         <property name="styleSheet">
-          <string notr="true"> border-style: solid;  
-border-color: #9ba0a8;
-border-width: 1px;</string>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="1" colspan="4">
-        <widget class="QPushButton" name="pushButton">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Сгенерировать из случайных точек</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0" colspan="8">
-        <widget class="Line" name="line_2">
-         <property name="styleSheet">
-          <string notr="true"> border-style: solid;  
-border-color: #9ba0a8;
-border-width: 1px;</string>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="4">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Визуализироовать уравнение</string>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="5">
-        <widget class="QLabel" name="label">
-         <property name="maximumSize">
-          <size>
-           <width>175</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Количество точек:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0" colspan="6">
-        <widget class="QPushButton" name="pushButton_2">
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Счиать набор точек из файла</string>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="6">
-        <widget class="QSpinBox" name="spinBox">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="minimum">
-          <number>1</number>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1" colspan="6">
-        <widget class="QLabel" name="label_2">
-         <property name="styleSheet">
-          <string notr="true">    font: 12pt &quot;Purisa&quot;;
-    font-size: 25px;
-    color: #54b2ff;
-border-width: 1px;
-border-radius: 10px;
-background-image: url(:/depositphotos_51907249-stock-illustration-abstract-isometric-computer-generated-3d.jpg);</string>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Draw3D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="7">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>50</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="10" column="0" colspan="8">
-        <widget class="Line" name="line">
-         <property name="styleSheet">
-          <string notr="true"> border-style: solid;  
-border-color: #9ba0a8;
-border-width: 1px;</string>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="8">
-        <widget class="Line" name="line_4">
-         <property name="styleSheet">
-          <string notr="true"> border-style: solid;  
-border-color: #9ba0a8;
-border-width: 1px;</string>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="4" colspan="4">
-        <widget class="QLineEdit" name="lineEdit"/>
-       </item>
-       <item row="5" column="4">
+       <item row="8" column="4">
         <widget class="QTableWidget" name="tableWidget">
          <property name="maximumSize">
           <size>
@@ -323,7 +185,145 @@ border-width: 1px;</string>
          </item>
         </widget>
        </item>
-       <item row="4" column="4">
+       <item row="6" column="0" colspan="8">
+        <widget class="Line" name="line_3">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1" colspan="4">
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Сгенерировать из случайных точек</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="0" colspan="8">
+        <widget class="Line" name="line_2">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Визуализироовать уравнение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="5">
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>175</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Количество точек:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0" colspan="6">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Счиать набор точек из файла</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="6">
+        <widget class="QSpinBox" name="spinBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="6">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">    font: 12pt &quot;Purisa&quot;;
+    font-size: 25px;
+    color: #54b2ff;
+border-width: 1px;
+border-radius: 10px;
+background-image: url(:/depositphotos_51907249-stock-illustration-abstract-isometric-computer-generated-3d.jpg);</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Draw3D&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="7">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="0" colspan="8">
+        <widget class="Line" name="line">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="8">
+        <widget class="Line" name="line_4">
+         <property name="styleSheet">
+          <string notr="true"> border-style: solid;  
+border-color: #9ba0a8;
+border-width: 1px;</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4" colspan="4">
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item row="7" column="4">
         <widget class="QPushButton" name="pushButton_3">
          <property name="styleSheet">
           <string notr="true"/>
@@ -333,7 +333,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="5">
+       <item row="8" column="5">
         <widget class="QPushButton" name="pushButton_4">
          <property name="maximumSize">
           <size>
@@ -346,6 +346,20 @@ border-width: 1px;</string>
          </property>
          <property name="text">
           <string>+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="4">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Выполняется обработка уравнения...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1" colspan="2">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>PushButton</string>
          </property>
         </widget>
        </item>

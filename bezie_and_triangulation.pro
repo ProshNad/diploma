@@ -62,8 +62,23 @@ unix:!macx: LIBS += -L$$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer/ -l
 INCLUDEPATH += $$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer
 DEPENDPATH += $$PWD/../Загрузки/libQGLViewer-2.7.2/QGLViewer
 
+
+
 DISTFILES += \
     eq.py
 
 RESOURCES += \
     re.qrc
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../usr/lib/x86_64-linux-gnu/release/ -lmpfr
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../usr/lib/x86_64-linux-gnu/debug/ -lmpfr
+else:unix: LIBS += -L$$PWD/../../../usr/lib/x86_64-linux-gnu/ -lmpfr
+
+INCLUDEPATH += $$PWD/../../../usr/lib/x86_64-linux-gnu
+DEPENDPATH += $$PWD/../../../usr/lib/x86_64-linux-gnu
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../../usr/lib/x86_64-linux-gnu/release/libmpfr.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../usr/lib/x86_64-linux-gnu/debug/libmpfr.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../../../usr/lib/x86_64-linux-gnu/release/mpfr.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../../../usr/lib/x86_64-linux-gnu/debug/mpfr.lib
+else:unix: PRE_TARGETDEPS += $$PWD/../../../usr/lib/x86_64-linux-gnu/libmpfr.a

@@ -36,7 +36,6 @@ typedef CGAL::Delaunay_triangulation_3<K>                   DT3;
 typedef CGAL::Creator_uniform_3<double,K::Point_3>          Creator;
 
 
-typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef CGAL::Delaunay_triangulation_2<K> Triangulation;
 typedef Triangulation::Point Point2;
 
@@ -68,6 +67,8 @@ private slots:
 
     void on_pushButton_5_clicked();
     void draw_eq(QString eq);
+
+    void on_pushButton_6_clicked();
 
 private:
     Ui::MainWindow *ui;
