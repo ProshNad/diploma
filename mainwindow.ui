@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>969</width>
-    <height>691</height>
+    <width>1059</width>
+    <height>770</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -117,7 +117,15 @@ border-radius: 35px;
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
-       <item row="8" column="4">
+       <item row="3" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Визуализироовать  
+уравнение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
         <widget class="QTableWidget" name="tableWidget">
          <property name="maximumSize">
           <size>
@@ -130,12 +138,12 @@ border-radius: 35px;
          </property>
          <row>
           <property name="text">
-           <string>Точка №1</string>
+           <string>1</string>
           </property>
          </row>
          <row>
           <property name="text">
-           <string>Точка №2</string>
+           <string>2</string>
           </property>
          </row>
          <column>
@@ -185,7 +193,7 @@ border-radius: 35px;
          </item>
         </widget>
        </item>
-       <item row="6" column="0" colspan="8">
+       <item row="5" column="0" colspan="8">
         <widget class="Line" name="line_3">
          <property name="styleSheet">
           <string notr="true"> border-style: solid;  
@@ -197,7 +205,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="14" column="1" colspan="4">
+       <item row="13" column="1" colspan="4">
         <widget class="QPushButton" name="pushButton">
          <property name="styleSheet">
           <string notr="true"/>
@@ -207,7 +215,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="11" column="0" colspan="8">
+       <item row="10" column="0" colspan="8">
         <widget class="Line" name="line_2">
          <property name="styleSheet">
           <string notr="true"> border-style: solid;  
@@ -219,14 +227,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="0" colspan="4">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="text">
-          <string>Визуализироовать уравнение</string>
-         </property>
-        </widget>
-       </item>
-       <item row="14" column="5">
+       <item row="13" column="5">
         <widget class="QLabel" name="label">
          <property name="maximumSize">
           <size>
@@ -239,7 +240,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="12" column="0" colspan="6">
+       <item row="11" column="0" colspan="6">
         <widget class="QPushButton" name="pushButton_2">
          <property name="styleSheet">
           <string notr="true"/>
@@ -249,7 +250,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="14" column="6">
+       <item row="13" column="6">
         <widget class="QSpinBox" name="spinBox">
          <property name="minimumSize">
           <size>
@@ -280,7 +281,7 @@ background-image: url(:/depositphotos_51907249-stock-illustration-abstract-isome
          </property>
         </widget>
        </item>
-       <item row="14" column="7">
+       <item row="13" column="7">
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -296,7 +297,7 @@ background-image: url(:/depositphotos_51907249-stock-illustration-abstract-isome
          </property>
         </spacer>
        </item>
-       <item row="13" column="0" colspan="8">
+       <item row="12" column="0" colspan="8">
         <widget class="Line" name="line">
          <property name="styleSheet">
           <string notr="true"> border-style: solid;  
@@ -320,10 +321,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="4" column="4" colspan="4">
-        <widget class="QLineEdit" name="lineEdit"/>
-       </item>
-       <item row="7" column="4">
+       <item row="6" column="4">
         <widget class="QPushButton" name="pushButton_3">
          <property name="styleSheet">
           <string notr="true"/>
@@ -333,7 +331,7 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="8" column="5">
+       <item row="7" column="5">
         <widget class="QPushButton" name="pushButton_4">
          <property name="maximumSize">
           <size>
@@ -349,18 +347,112 @@ border-width: 1px;</string>
          </property>
         </widget>
        </item>
-       <item row="5" column="4">
+       <item row="4" column="4">
         <widget class="QLabel" name="label_3">
          <property name="text">
           <string>Выполняется обработка уравнения...</string>
          </property>
         </widget>
        </item>
-       <item row="15" column="1" colspan="2">
+       <item row="14" column="1" colspan="2">
         <widget class="QPushButton" name="pushButton_6">
          <property name="text">
           <string>PushButton</string>
          </property>
+        </widget>
+       </item>
+       <item row="3" column="4" colspan="4">
+        <widget class="QLineEdit" name="lineEdit"/>
+       </item>
+       <item row="2" column="5" colspan="3">
+        <widget class="QComboBox" name="comboBox">
+         <property name="styleSheet">
+          <string notr="true">
+
+QTableWidget QTableCornerButton::section {
+
+}
+
+QHeaderView::section {
+    background-color: #dbeaff;
+    padding: 4px;
+    border: 0px;
+}
+
+
+QWidget {
+    background-color: #dbeaff;
+
+} 
+
+QLabel {
+    font: medium Ubuntu;
+    font-size: 20px;
+    color: #dbeaff;
+border-width: 0px;
+}        
+
+
+QLineEdit {
+padding: 1px;
+border-style: none none double none ;
+border-width: 2px ;
+border-radius: 0px;
+ border-color: #dbeaff;
+ background-color: #dbeaff;
+}
+
+QLineEdit:hover {
+    border-width: 3px ;
+}
+
+
+
+
+
+
+
+QPushButton{
+
+border-radius: 35px;  
+    background-color: #dbeaff;
+   font-size: 10pt;
+    font-weight: bold;
+   color: #dbeaff;
+    width:  70px;  
+    height: 70px;
+    border-radius: 35px;        
+    border-width: 1px;
+    border-style: solid;  
+    border-color: #dbeaff;
+}
+ 
+ QPushButton:hover  {
+    background-color: #dbeaff;
+border-radius: 25px;    
+border-color: #54b2ff;
+}
+QPushButton:pressed {
+    background-color: #dbeaff;
+border-radius: 35px;    
+} 
+    </string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Жадный алгоритм</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Алгоритм с динамическим кэшированием поиска</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Алгоритм с послойным сгущением</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -373,10 +465,26 @@ border-width: 1px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>969</width>
+     <width>1059</width>
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+    <addaction name="action_3"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -387,6 +495,21 @@ border-width: 1px;</string>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="text">
+    <string>Выйти</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Помощь</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
